@@ -6,7 +6,7 @@
 #    By: auguste <auguste@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/20 19:32:45 by aderouba          #+#    #+#              #
-#    Updated: 2023/12/21 01:21:12 by auguste          ###   ########.fr        #
+#    Updated: 2023/12/21 04:09:49 by auguste          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ MAKEFLAGS		:=	--no-print-directory
 #=================================COMPILATION==================================#
 CC			:=	gcc
 CFLAGS		:=	-MP -MMD -I .
-SDL_FLAGS	:=	`sdl2-config --cflags --libs`
+SDL_FLAGS	:=	`sdl2-config --cflags --libs` -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lSDL2_net
 
 #==================================EXECUTABLE==================================#
 NAME		:=	SDL2_base
@@ -26,7 +26,7 @@ BUILD_DIR	:=	.build
 BIN_DIR		:=	bin
 
 #=================================SOURCE FILES=================================#
-SRCS	:=	srcs/main.c
+SRCS	:=	srcs/main_SDL2.c
 
 #====================================OBJECTS===================================#
 OBJS	:=	${SRCS:%.c=$(BUILD_DIR)/%.o}

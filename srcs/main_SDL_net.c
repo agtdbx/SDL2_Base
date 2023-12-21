@@ -1,4 +1,5 @@
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_net.h>
 #include <stdio.h>
 
 int main(void)
@@ -6,6 +7,14 @@ int main(void)
     if(SDL_Init(SDL_INIT_EVERYTHING) < 0)
     {
         printf("Failed to initialize the SDL2 library\n");
+        printf("Error : %s\n", SDL_GetError());
+        return (1);
+    }
+
+    if(SDLNet_Init() < 0)
+    {
+        printf("Failed to initialize the SDL_TTF library\n");
+        printf("Error : %s\n", SDL_GetError());
         return (1);
     }
 
@@ -18,6 +27,7 @@ int main(void)
     if(!window)
     {
         printf("Failed to create window\n");
+        printf("Error : %s\n", SDL_GetError());
         return (1);
     }
 
@@ -25,7 +35,8 @@ int main(void)
 
     if(!renderer)
     {
-       printf("Failed to get the surface from the window\n");
+        printf("Failed to get the surface from the window\n");
+        printf("Error : %s\n", SDL_GetError());
         return (1);
     }
 
@@ -33,6 +44,8 @@ int main(void)
 
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
+
+    SDLNet_Quit();
     SDL_Quit();
 
     return (0);

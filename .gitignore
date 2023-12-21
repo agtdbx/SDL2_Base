@@ -1,4 +1,6 @@
 .build
 .vscode
 bin
-SDL
+SDL2
+.o
+.d
