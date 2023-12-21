@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    if(SDL_Init(SDL_INIT_VIDEO) < 0)
+    if(SDL_Init(SDL_INIT_EVERYTHING) < 0)
     {
         printf("Failed to initialize the SDL2 library\n");
         printf("Error : %s\n", SDL_GetError());
