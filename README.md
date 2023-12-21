@@ -1,6 +1,8 @@
 # SDL2_Base
 Repo servant de base a un projet C ou C++ avec la SDL2.
 
+Quelque main en c sont là pour servir d'exemple.
+
 ## Configuration
 ```
 ./setup.sh
