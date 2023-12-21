@@ -7,7 +7,7 @@ Quelque main en c sont là pour servir d'exemple.
 ```
 ./setup.sh
 ```
-*Cela va installer la SDL2, puis vous proposez d'installer SDL_Image, SDL_TTF et SDL_Mixer*
+*Cela va installer la SDL2, puis vous proposez d'installer SDL_image, SDL_ttf, SDL_mixer et SDL_net*
 
 ## Environement
 
@@ -16,7 +16,7 @@ Le projet est séparant en plus fichiers :
  - bin -> C'est dans ce dossier que ce trouvera l'éxécutable du projet
  - data -> C'est ici que vous pourrez mettre vos données pour le projet
  - includes -> C'est le dossier où ranger ces headers (.h/.hpp)
- - SDL -> C'est le dossier de la SDL2
+ - SDL2 -> C'est le dossier des libs SDL2
  - srcs -> C'est ici que vous pouvez mettre tous vos fichiers sources (.c/.cpp)
 
 ## Makefile
